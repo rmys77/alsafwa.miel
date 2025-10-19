@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عسل الصفوة</title>
+  <link rel="stylesheet" href="HoneyStore.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">عسل الصفوة</div>
+    <nav>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#products">المنتجات</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+    </nav>
+    <a href="#products" class="btn">تسوّق الآن</a>
+  </header>
+
+
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>عسل <span>الصفوة</span> </h1>
+      <br>
+      <p>عسل " الصّفوة" منتوج يسوّق أجود وأصفى  وألذّ أنواع العسل الطّبيعي مباشرة من عند النّحال ليصل إلى مائدتك.</p>
+      <br><br>
+      <div class="hero-buttons">
+        <a href="#products" class="btn">تسوّق منتجاتنا</a>
+        <a href="#about" class="btn-outline">اعرف المزيد</a>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- PRODUCTS SECTION -->
+<section id="products" class="products">
+  <h2>تشكيلة العسل الفاخر</h2>
+  <p class="subtitle">
+  اكتشف مجموعتنا المختارة بعناية من أجود أنواع العسل الطبيعي، كل عبوة تعكس الجودة والنّقاء.
+  </p>
+  <br>
+
+  <div class="product-grid">
+
+    <!-- PRODUCT 4 (Discounted Pack - Fixed Layout) -->
+<div class="product-card discount-card">
+  <span class="tag premium">عرض خاص</span>
+  <span class="discount-badge">خصم 30%</span>
+  <span class="limited">عدد محدود</span>
+
+  <img src="29eee37e-37b5-4d25-a94e-dbbf7797c96f.jpg" alt="باكج عسل السّحتر وعسل الأعشاب">
+  <h3>باكج نصف كيلو عسل السّحتر و  نصف كيلو عسل الأعشاب</h3>
+  <br>
+  <p>مزيج فاخر من أجود أنواع العسل الطبيعي عسل السّحتر لتقوية المناعة، وعسل الأعشاب الأسود للطاقة والنشاط.</p>
+  <div class="price-box">
+    <span class="old-price">470 MAD</span>
+    <br>
+    <span class="new-price"> فقط  449 MAD</span>
+  </div>
+
+  <button class="buy-btn">طلب الآن</button>
+</div>
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+      <span class="tag best">الأكثر مبيعاً</span>
+      <img src="173987aa-8c49-40fa-9ee6-b433d9eca984.jpg" alt="عسل الزهور البرية">
+       <h3>عسل السّحتر</h3>
+      <p>عسل السّحتر الطبيعي 100٪   – بدون أي إضافات..</p>
+
+      <label for="size1">اختر الحجم:</label>
+      <select id="size1" class="size-select" data-base="110 MAD">
+        <option value="110 MAD">250 غرام</option>
+        <option value=" 200 MAD">500 غرام</option>
+        <option value="370 MAD">1 كيلوغرام</option>
+      </select>
+
+      <div class="price">MAD<span>110 </span></div>
+      <br>
+      <button class="buy-btn">طلب الآن</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+      <span class="tag premium">فاخر</span>
+      <img src="e9490611-6dbd-4256-ba09-366cd4f8998e.jpg" alt="عسل السّحتر">
+      <h3>عسل الأعشاب</h3>
+      <p>دواء طبيعي بنكهة عشبية وفوائد يومية للصحة 100٪ طبيعي – بدون أي إضافات.</p>
+
+      <label for="size2">اختر الحجم:</label>
+      <select id="size2" class="size-select" data-base="19.99">
+        <option value="150 MAD">250 غرام</option>
+        <option value="  270 MAD">500 غرام</option>
+        <option value="500 MAD">1 كيلوغرام</option>
+      </select>
+
+      <div class="price">MAD<span>150 </span></div>
+      <br>
+      <button class="buy-btn">طلب الآن</button>
+    </div>
+
+  <!-- PRODUCT 3 -->
+<div class="product-card">
+  <img src="269f84bc-f5af-4f1b-97e2-54a765e1d149.jpg" alt="عسل بالجملة">
+  <h3>عسل بالجملة</h3>
+  <p>عسل طبيعي بأسعار الجملة للتجار، المحلات والموزعين.<br>اختر النوع والحجم لمعرفة السعر.</p>
+
+  <!-- اختيار نوع العسل -->
+  <label for="type3">اختر نوع العسل:</label>
+  <select id="type3" class="type-select">
+    <option value="thyme">عسل السّحتر</option>
+    <option value="herbal">عسل الأعشاب</option>
+  </select>
+
+  <!-- اختيار الحجم -->
+  <label for="size3">اختر الحجم:</label>
+  <select id="size3" class="size-select">
+    <option value="1L">لتر (كيلو وربع)</option>
+    <option value="5-10L">من 5 لتر إلى 10 لتر</option>
+    <option value="10L+">من 10 لتر فأكثر</option>
+  </select>
+
+  <!-- عرض السعر -->
+  <div class="price">MAD <span id="price3">---</span></div>
+
+  <button class="buy-btn">طلب الآن</button>
+</div>
+
+
+ <!-- PRODUCT 4 -->
+    <div class="product-card">
+  <img src="e9490611-6dbd-4256-ba09-366cd4f8998e.jpg" alt=" باك عسل">
+  <h3>باكج عسل السّحتر وعسل الأعشاب</h3>
+  <p>عسل السّحتر الغني بالعطر وفوائد الأعشاب العلاجية، تجربة صحية متكاملة يوميًا.</p>
+
+  <!-- Size selection -->
+  <label for="size3">اختر الحجم:</label>
+  <select id="size3" class="size-select" data-base="370 MAD">
+    <option value="450 MAD"> كيلو عسل السحتر + كيلو عسل الاعشاب</option>
+    <option value="450 MAD"> ربع كيلو عسل السحتر + ربع كيلو عسل الاعشاب</option>
+    <option value="450 MAD">نصف كيلو عسل السحتر + نصف كيلو عسل الاعشاب </option>
+
+  </select>
+
+
+  <!-- Price display -->
+  <div class="price">MAD<span> 800  </span></div>
+  <br>
+  <button class="buy-btn">طلب الآن</button>
+</div>
+  </div>
+</section>
+
+
+ <!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>من نحن</h2>
+      <br>
+      <p>
+      <strong>عسل الصفوة</strong>  ليس مجرد عسل يوضع في عبوة، بل هو رحلة تبدأ من قلب الطّبيعة لتنتهي على مائدتك
+      <br>نعتني بكل التفاصيل لنقدم لك عسلًا طبيعيًا نقيًا 100%، يحمل طعم الزهور البرية وعبق جبال الأطلس وسهولها.
+
+نختار مصادرنا بعناية، ونتعامل مع نحّالين خبراء يؤمنون بأن العسل ليس منتجًا فحسب، بل قصة نقاء تبدأ من الطبيعة وتنتهي على مائدتك
+</p>
+
+
+
+
+      <a href="#contact" class="btn">تواصل معنا</a>
+    </div>
+    <div class="about-image">
+      <img src="18eccfe0-d074-4df6-b457-6af665e46d59.jpg" alt="نحل يصنع العسل">
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-container">
+    <div class="contact-text">
+      <h2>اتصل بنا</h2>
+      <p>
+        هل لديك أي استفسار أو ترغب في تقديم طلب بالجملة؟  
+        يسعدنا تواصلك معنا عبر واتساب أو البريد الإلكتروني.
+      </p>
+      <a href="https://wa.me/212619943471" class="btn whatsapp-btn">
+        💬 تحدث معنا على واتساب
+      </a>
+    </div>
+
+    <div class="contact-image">
+      <img src="0d8155d8-11a2-4805-8e60-62974f124509.jpg" alt="تواصل معنا">
+    </div>
+  </div>
+</section>
+
+
+ <footer>
+  <div class="footer-container">
+    <div class="footer-logo">عسل الحصاد الذهبي</div>
+    <p>© 2025 جميع الحقوق محفوظة.</p>
+
+    <div class="footer-social">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+      <a href="https://wa.me/212619943471"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

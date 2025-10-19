@@ -1,0 +1,70 @@
+body {
+    background-image: url(https://i.pinimg.com/736x/14/45/2c/14452ca0dc4690a2fabcf65ad18ac276.jpg);
+}
+ul{
+    list-style-type: none;
+    margin: 100px;
+    text-align: center;
+}
+li{
+    display: inline-block;
+}
+a{
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+a:hover{
+    color:blue;
+    background-color: beige;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .status-admis {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  .status-echoue {
+    color: #f44336;
+    font-weight: bold;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color:#333;
+  }

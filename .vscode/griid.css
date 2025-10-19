@@ -1,0 +1,22 @@
+.parent{
+    background: red;
+    width: 500px;
+    padding:10px;
+    display: grid;
+    /*pixel
+    grid-template-columns:100px 100px 100px 100px
+    */
+    grid-template-columns: repeat(4, 100px);
+    /*pourcentage*/
+    grid-template-columns: 50% 50%;
+    /*
+    /*fragment*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4,100px);
+}
+.parent div{
+    background-color: gold;
+
+}
+
+

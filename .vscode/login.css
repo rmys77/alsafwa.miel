@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(22, 110, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box{
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+}
+h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+
+}
+.input-group{
+    text-align: left;
+    margin-bottom: 15px;
+}
+.input-group label{
+    font-size: 18px;
+    font-weight: bold;
+}
+.input-field{
+    padding: 5px;
+}
+.input-field i{
+    color: gray;
+    margin-right: 10px;
+}
+.input-field input{
+    border: none;
+    width: 80%;
+    padding: 5px;
+    font-size: 16px;
+}
+.forgot-password{
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+.forgot-password:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border:none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.social-text{
+    font-size:14px ;
+    color:green;
+    margin-top: 20px;
+}
+.social-icons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.social-icons a{
+    
+     
+}
+ 
