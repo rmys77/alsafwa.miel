@@ -1,3 +1,32 @@
+/* Base styles — desktop */
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* ✅ For small screens (phones) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
 /* Hide PRODUCT 4 (last .product-card in the grid) */
 .product-grid > .product-card:last-child {
   display: none !important;
