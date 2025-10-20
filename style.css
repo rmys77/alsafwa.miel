@@ -592,6 +592,136 @@ footer {
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================
+   Responsive / Mobile rules
+   ========================== */
+
+/* Make images responsive and avoid overflow */
+.about-image img,
+.contact-image img,
+.discount-card .product-image img,
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Mobile-first tweaks: smaller paddings and scalable typography */
+header {
+  padding: 12px 20px;
+}
+
+.logo {
+  font-size: 1.2em;
+}
+
+nav ul {
+  gap: 12px;
+}
+
+.hero {
+  height: auto; /* let content define height on small screens */
+  padding: 80px 20px 40px;
+  background-position: center top;
+}
+
+.hero-content {
+  padding: 0 12px;
+}
+
+.hero h1 {
+  font-size: 2em;
+}
+
+.hero p {
+  font-size: 1em;
+}
+
+.products,
+.about,
+.contact {
+  padding: 60px 20px;
+}
+
+.about-container,
+.contact-container {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.about-image,
+.contact-image {
+  order: 2;
+  width: 100%;
+  text-align: center;
+}
+
+.about-text,
+.contact-text {
+  order: 1;
+  width: 100%;
+  text-align: right;
+}
+
+.discount-card {
+  max-width: 100%;
+  padding: 28px 18px;
+  border-radius: 16px;
+}
+
+.product-grid {
+  grid-template-columns: 1fr; /* stack cards on phones */
+  gap: 18px;
+}
+
+.product-card {
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.price-box,
+.price {
+  font-size: 1em;
+}
+
+.buy-btn,
+.btn,
+.btn-outline,
+.whatsapp-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 16px;
+  margin-top: 10px;
+}
+
+/* Smaller devices tweaks */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.6em; }
+  .hero p { font-size: 0.95em; }
+  header { padding: 10px 14px; }
+  .logo img { height: 40px; }
+  nav ul { gap: 8px; font-size: 0.95em; }
+  .about-text p, .contact-text p { font-size: 1em; }
+  .discount-card .product-image img { height: auto; }
+}
+
+/* Medium devices: keep two columns for wider phones in landscape */
+@media (min-width: 601px) and (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .about-image img, .contact-image img { max-width: 420px; width: 100%; }
+}
 
 /* Active state */
 .fade-in.active {
