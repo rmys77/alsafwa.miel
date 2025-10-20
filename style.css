@@ -2,17 +2,35 @@
 .product-grid > .product-card:last-child {
   display: none !important;
 }
+:root {
+  --bg: #fffefb;
+  --muted: #6b6b6b;
+  --accent: #f4a100;
+  --accent-2: #e67e22;
+  --card-bg: #fff7e6;
+  --glass: rgba(255,255,255,0.65);
+  --shadow-1: 0 10px 30px rgba(18,18,18,0.06);
+  --shadow-2: 0 18px 40px rgba(18,18,18,0.08);
+  --radius-lg: 20px;
+  --radius-sm: 10px;
+  --max-width: 1100px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: #333;
-  background-color: #fff;
+  color: #222;
+  background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
   direction: rtl;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 /* HEADER */
@@ -23,15 +41,17 @@ header {
   padding: 20px 50px;
   position: fixed;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), var(--glass));
+  backdrop-filter: blur(6px) saturate(120%);
   z-index: 1000;
+  box-shadow: var(--shadow-1);
 }
 
 .logo {
   font-family: 'Amiri', serif;
-  font-size: 1.8em;
-  color: #b77900;
+  font-size: 1.6em;
+  color: var(--accent-2);
+  letter-spacing: 0.6px;
 }
 .logo img {
   height: 50px; /* adjust the size */
@@ -48,31 +68,39 @@ nav ul {
 }
 
 nav ul li a {
-  color: #333;
+  color: var(--muted);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.25s, color 0.25s;
 }
 
+nav ul li a:hover { background: rgba(244,161,0,0.08); color: #222; }
+
 .btn {
-  background: #f4a100;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px 18px;
+  border-radius: 14px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 18px rgba(230,130,20,0.12);
 }
 
 .btn:hover {
-  background: #d88f00;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
 }
 
 .btn-outline {
-  border: 2px solid #f4a100;
-  color: #f4a100;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border: 1.8px solid var(--accent);
+  color: var(--accent-2);
+  padding: 8px 16px;
+  border-radius: 12px;
   text-decoration: none;
   margin-right: 10px;
+  background: rgba(244,161,0,0.03);
 }
 
 .btn-outline:hover {
@@ -82,8 +110,8 @@ nav ul li a {
 
 /* HERO */
 .hero {
-  background: url('Gemini_Generated_Image_m65ar1m65ar1m65a.png') center/cover no-repeat;
-  height: 100vh;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.22)), url('Gemini_Generated_Image_m65ar1m65ar1m65a.png') center/cover no-repeat;
+  min-height: 72vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +138,7 @@ nav ul li a {
 
 .hero h1 {
   font-size: 3em;
+  text-shadow: 0 6px 22px rgba(0,0,0,0.35);
 }
 
 .hero h1 span {
@@ -121,7 +150,7 @@ nav ul li a {
 .products {
   padding: 100px 50px;
   text-align: center;
-  background: #fff;
+  background: linear-gradient(180deg, #fff 0%, #fffaf3 100%);
 }
 
 .products h2 {
@@ -150,23 +179,24 @@ nav ul li a {
 
 
 .product-card {
-  background: #fff7e6;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, var(--card-bg) 0%, #fffefb 100%);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-1);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-2);
 }
 
 .product-card img {
   width: 100%;
-  border-radius: 50px;
-  margin-bottom: 39px;
+  border-radius: 18px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.08);
 }
 
 .product-card h3 {
@@ -184,23 +214,25 @@ nav ul li a {
 
 .price {
   color: #333;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.05em;
+  margin-bottom: 8px;
 }
 
 .buy-btn {
-  background: #f4a100;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
   color: #fff;
   border: none;
-  padding: 10px 25px;
-  border-radius: 25px;
+  padding: 12px 26px;
+  border-radius: 14px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 10px 25px rgba(244,161,0,0.12);
 }
 
 .buy-btn:hover {
-  background: #d88f00;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
 }
 
 
